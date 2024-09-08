@@ -9,8 +9,7 @@ Barn::Barn(string typeOfCrop, int capacity)
     this->typeOfCrop = typeOfCrop; 
     this->capacity = capacity; 
     this->amount = 0; 
-    soilState = nullptr; 
-    truckList = nullptr; 
+    soilState = nullptr;  
 }
 
 string Barn::getSoilStateName()
@@ -21,7 +20,7 @@ string Barn::getSoilStateName()
 SoilState* Barn::getSoilState()
 {
     cout << "Barn does not have a soil state."; 
-    return null; 
+    return nullptr; 
 }
 
 void Barn::setSoilState(SoilState* newState)
