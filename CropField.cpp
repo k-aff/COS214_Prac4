@@ -12,5 +12,12 @@ CropField::CropField(string typeOfCrop, int capacity, SoilState* soilState)
     this->amount = 0; 
 }
 
+void CropField::add(FarmUnit* unit)
+{
+    cout << "Can't add a FarmUnit to a CropField." << endl; 
+}
 
-
+void CropField::remove(FarmUnit* unit)
+{
+    cout << "Can't remove a FarmUnit from a CropField." << endl; 
+}

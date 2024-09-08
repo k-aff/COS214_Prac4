@@ -13,6 +13,8 @@ class Barn : public FarmUnit
         virtual string getSoilStateName();
         virtual SoilState* getSoilState(); 
         virtual void setSoilState(SoilState* newState);
+        virtual void add(FarmUnit* unit); 
+        virtual void remove(FarmUnit* unit);
 
 };
 

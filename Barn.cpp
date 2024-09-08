@@ -27,3 +27,13 @@ void Barn::setSoilState(SoilState* newState)
 {
     cout << "Barn does not have a soil state."; 
 }
+
+void Barn::add(FarmUnit* unit)
+{
+    cout << "Can't add a FarmUnit to a Barn." << endl; 
+}
+
+void Barn::remove(FarmUnit* unit)
+{
+    cout << "Can't remove a FarmUnit from a Barn." << endl; 
+}
