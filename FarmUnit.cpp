@@ -31,3 +31,19 @@ void FarmUnit::callTruck()
 {
     //needs to be filled in after iterator is done
 }
+
+FarmUnit::~FarmUnit()
+{
+    if (soilState != nullptr)
+    {
+        delete soilState; 
+        soilState = nullptr; 
+    }
+
+    if (!truckList.empty())
+    {
+        for (int i = 0; i < truckList.size(); i++) 
+            delete truckList[i];
+        truckList.clear(); 
+    }
+}

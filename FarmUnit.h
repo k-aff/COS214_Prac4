@@ -5,6 +5,7 @@
 #include "Truck.h"
 
 #include <string>
+#include <vector>
 using namespace std; 
 
 class FarmUnit
@@ -14,14 +15,15 @@ class FarmUnit
         int capacity; 
         int amount; 
         SoilState* soilState; 
-        Truck* truckList; 
+        vector<Truck*> truckList; 
 
     public:
         //class operations 
         virtual int getTotalCapacity(); 
         virtual string getSoilStateName();
-        string getCropType(); 
+        virtual string getCropType(); 
         void updateAmount(int num); 
+        virtual ~FarmUnit(); 
 
         //state class operations
         virtual SoilState* getSoilState() = 0; 
