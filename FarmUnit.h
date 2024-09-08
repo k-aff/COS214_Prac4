@@ -34,11 +34,11 @@ class FarmUnit
         //composite class operations
         virtual void add(FarmUnit* unit) = 0; 
         virtual void remove(FarmUnit* unit) = 0; 
-        virtual FarmUnit* getChild(int index) = 0; 
+        virtual FarmUnit* getChild(int index); 
 
         //observer class operations
-        virtual void buyTruck(Truck* truck) = 0; 
-        virtual void sellTruck(Truck* truck) = 0; 
+        virtual void buyTruck(Truck* truck); 
+        virtual void sellTruck(Truck* truck); 
         virtual void callTruck(); 
 
 }; 

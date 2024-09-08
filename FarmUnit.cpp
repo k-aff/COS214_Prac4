@@ -37,6 +37,32 @@ vector<Truck*> FarmUnit::getTruckList()
     return truckList; 
 }
 
+FarmUnit* FarmUnit::getChild(int index)
+{
+    return nullptr; 
+}
+
+void FarmUnit::buyTruck(Truck* truck)
+{
+    truckList.push_back(truck); 
+}
+
+void FarmUnit::sellTruck(Truck* truck)
+{
+    //NEED TO CHECK IF THIS WORKS
+
+    for (int i=0; i<truckList.size(); i++)
+    {
+        if (truckList[i] == truck)
+        {
+            delete truckList[i]; 
+            truckList[i] = nullptr; 
+            truckList.erase(truckList.begin() + i);
+            break; 
+        }
+    }
+}
+
 void FarmUnit::callTruck()
 {
     //needs to be filled in after iterator is done
