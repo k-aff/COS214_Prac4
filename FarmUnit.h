@@ -13,14 +13,15 @@ class FarmUnit
         string typeOfCrop; 
         int capacity; 
         int amount; 
-        SoilState *soilState; 
-        Truck *truckList; 
+        SoilState* soilState; 
+        Truck* truckList; 
 
     public:
         //class operations 
-        virtual int getTotalCapacity() = 0; 
-        string getCropType(); 
+        virtual int getTotalCapacity(); 
         virtual string getSoilStateName();
+        string getCropType(); 
+        void updateAmount(int num); 
 
         //state class operations
         virtual SoilState* getSoilState() = 0; 
@@ -34,7 +35,7 @@ class FarmUnit
         //observer class operations
         virtual void buyTruck(Truck* truck) = 0; 
         virtual void sellTruck(Truck* truck) = 0; 
-        virtual bool callTruck() = 0; 
+        virtual void callTruck(); 
 
 }; 
 
