@@ -12,10 +12,13 @@ class FarmLand : public FarmUnit
         vector<FarmUnit*> children; 
 
     public:
-        virtual int getTotalCapacity(); 
+        FarmLand(); 
         virtual void add(FarmUnit* unit); 
         virtual void remove(FarmUnit* unit); 
-        virtual FarmUnit* getChild(int index); 
+        virtual FarmUnit* getChild(int index);
+        virtual string getSoilStateName();  
+        virtual SoilState* getSoilState(); 
+        virtual void setSoilState(SoilState* newState); 
 
 }; 
 
