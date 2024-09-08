@@ -16,6 +16,8 @@ int main()
 
     //testing composite
     FarmLand* farm1 = new FarmLand();
+    FarmLand* farm2 = new FarmLand(); 
+    FarmLand* farmOfFarms = new FarmLand(); 
 
     SoilState* dry = new DrySoil(); 
     SoilState* fertilized = new FertilizedSoil(); 
@@ -97,6 +99,20 @@ int main()
     b1->remove(b1); 
     b1->getChild(0); 
 
+    cout << endl;     
+    cout << "Barn 2:" << endl; 
+    cout << "Capacity: " << b2->getTotalCapacity() << endl;  
+    cout << "Amount: " << b2->getAmount() << endl; 
+    b2->updateAmount(500);
+    cout << "Amount after updating : " << b2->getAmount() << endl; 
+    cout << "Crop type: " << b2->getCropType() << endl; 
+    cout << "Soil state name: " << b2->getSoilStateName() << endl; 
+    b2->getSoilState();
+    b2->setSoilState(dry); 
+    b2->add(b2); 
+    b2->remove(b2); 
+    b2->getChild(0); 
+
     // delete wheat;
     // wheat = nullptr;
     // delete corn; 
@@ -110,23 +126,52 @@ int main()
     farm1->add(corn); 
     farm1->add(rice);
     farm1->add(mielies); 
-    farm1->add(b1); 
-    farm1->add(b2); 
-    farm1->add(b3); 
-    farm1->add(b4); 
+
+    farm2->add(b1); 
+    farm2->add(b2); 
+    farm2->add(b3); 
+    farm2->add(b4); 
 
     cout << endl;
-    cout << "Farm1:" << endl; 
+    cout << "Farm 1:" << endl; 
     cout << "Capacity: " << farm1->getTotalCapacity() << endl;  
     cout << "Amount: " << farm1->getAmount() << endl; 
     farm1->updateAmount(4000);
     cout << "Amount after updating : " << farm1->getAmount() << endl; 
-    cout << "Crop type: " << farm1->getCropType() << endl; 
+    cout << "Crop types: " << farm1->getCropType() << endl; 
     cout << "Soil state name: " << farm1->getSoilStateName() << endl; 
     //need to test remove and getchild 
+
+    cout << endl;
+    cout << "Farm 2:" << endl; 
+    cout << "Capacity: " << farm2->getTotalCapacity() << endl;  
+    cout << "Amount: " << farm2->getAmount() << endl; 
+    farm2->updateAmount(4000);
+    cout << "Amount after updating : " << farm2->getAmount() << endl; 
+    cout << "Crop types: " << farm2->getCropType() << endl; 
+    cout << "Soil state name: " << farm2->getSoilStateName() << endl; 
+    //need to test remove and getchild 
+
+    farmOfFarms->add(farm1);
+    farmOfFarms->add(farm2); 
     
-    delete farm1; 
-    farm1 = nullptr; 
+    // delete farm1; 
+    // farm1 = nullptr; 
+    // delete farm2; 
+    // farm2 = nullptr; 
+
+    cout << endl;
+    cout << "Farm of Farms:" << endl; 
+    cout << "Capacity: " << farmOfFarms->getTotalCapacity() << endl;  
+    cout << "Amount: " << farmOfFarms->getAmount() << endl; 
+    farmOfFarms->updateAmount(4000);
+    cout << "Amount after updating : " << farmOfFarms->getAmount() << endl; 
+    cout << "Crop types: " << farmOfFarms->getCropType() << endl; 
+    cout << "Soil state name: " << farmOfFarms->getSoilStateName() << endl; 
+    //need to test remove and getchild 
+
+    delete farmOfFarms; 
+    farmOfFarms = nullptr;
 
     //test adding a farmland to a farmland 
     return 0; 
