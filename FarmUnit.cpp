@@ -47,3 +47,18 @@ FarmUnit::~FarmUnit()
         truckList.clear(); 
     }
 }
+
+SoilState* FarmUnit::getSoilState()
+{
+    return soilState;
+}
+
+void FarmUnit::setSoilState(SoilState* newState)
+{
+    if (soilState != nullptr)
+    {
+        delete soilState; 
+        soilState = nullptr; 
+    }
+    soilState = newState; 
+}

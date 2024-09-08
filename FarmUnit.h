@@ -26,8 +26,8 @@ class FarmUnit
         virtual ~FarmUnit(); 
 
         //state class operations
-        virtual SoilState* getSoilState() = 0; 
-        virtual void setSoilState(SoilState* newState) = 0; 
+        virtual SoilState* getSoilState(); 
+        virtual void setSoilState(SoilState* newState); 
         
         //composite class operations
         virtual void add(FarmUnit* unit) = 0; 
