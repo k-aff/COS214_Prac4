@@ -24,6 +24,7 @@ class FarmUnit
         string getCropType(); 
         void updateAmount(int num); 
         int getAmount(); 
+        vector<Truck*> getTruckList(); 
         virtual ~FarmUnit(); 
 
         //state class operations

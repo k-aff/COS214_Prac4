@@ -32,6 +32,11 @@ int FarmUnit::getAmount()
     return amount; 
 }
 
+vector<Truck*> FarmUnit::getTruckList()
+{
+    return truckList; 
+}
+
 void FarmUnit::callTruck()
 {
     //needs to be filled in after iterator is done
