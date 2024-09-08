@@ -22,7 +22,7 @@ void FarmUnit::updateAmount(int num)
 {
     if (amount + num >= capacity)
         amount = capacity; 
-    if (amount + num < 0)
+    else if (amount + num < 0)
         amount = 0; 
     else amount += num; 
     cout << "Amount updated. " << endl; 
@@ -40,6 +40,7 @@ vector<Truck*> FarmUnit::getTruckList()
 
 FarmUnit* FarmUnit::getChild(int index)
 {
+    cout << "FarmUnit has no children" << endl; 
     return nullptr; 
 }
 

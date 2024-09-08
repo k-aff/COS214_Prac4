@@ -5,7 +5,6 @@
 
 class DrySoil: public SoilState{
     public: 
-        DrySoil();
         virtual double harvestCrops();
         virtual double rain();
         virtual string getName();

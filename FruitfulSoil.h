@@ -5,7 +5,6 @@
 
 class FruitfulSoil : public SoilState{
     public:
-        FruitfulSoil();
         virtual double harvestCrops();
         virtual double rain();
         virtual string getName();

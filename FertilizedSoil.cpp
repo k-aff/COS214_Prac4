@@ -1,7 +1,5 @@
 #include "FertilizedSoil.h"
 
-FertilizedSoil::FertilizedSoil(): SoilState("Fertilized"){}
-
 double FertilizedSoil::harvestCrops(){
     return 0.5;   
 }
@@ -11,5 +9,5 @@ double FertilizedSoil::rain(){
 }
 
 string FertilizedSoil::getName(){
-    return SoilState::getName();
+    return "Fertilized";
 }

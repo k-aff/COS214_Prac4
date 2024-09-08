@@ -19,13 +19,13 @@ string Barn::getSoilStateName()
 
 SoilState* Barn::getSoilState()
 {
-    cout << "Barn does not have a soil state."; 
+    cout << "Barn does not have a soil state." << endl;
     return nullptr; 
 }
 
 void Barn::setSoilState(SoilState* newState)
 {
-    cout << "Barn does not have a soil state."; 
+    cout << "Barn does not have a soil state." << endl;  
 }
 
 void Barn::add(FarmUnit* unit)

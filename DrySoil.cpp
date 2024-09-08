@@ -1,7 +1,5 @@
 #include "DrySoil.h"
 
-DrySoil::DrySoil(): SoilState("Dry"){}
-
 double DrySoil::harvestCrops(){
     return 0.1;   
 }
@@ -11,5 +9,5 @@ double DrySoil::rain(){
 }
 
 string DrySoil::getName(){
-    return SoilState::getName();
+    return "Dry"; 
 }

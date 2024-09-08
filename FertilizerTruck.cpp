@@ -12,4 +12,5 @@ FertilizerTruck::FertilizerTruck(SoilState* fieldState, FarmUnit* farmUnit)
 void FertilizerTruck::startEngine()
 {
     //decrease amount using the formula = updateAmount(-1*amount*harvestCrop
+    cout << "incomplete in fertilizerTruck" << endl; 
 }

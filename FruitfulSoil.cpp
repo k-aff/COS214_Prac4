@@ -1,7 +1,5 @@
 #include "FruitfulSoil.h"
 
-FruitfulSoil::FruitfulSoil(): SoilState("Fruitful"){}
-
 double FruitfulSoil::harvestCrops(){
     return 0.3;   
 }
@@ -11,5 +9,5 @@ double FruitfulSoil::rain(){
 }
 
 string FruitfulSoil::getName(){
-    return SoilState::getName();
+    return "Fruitful";
 }

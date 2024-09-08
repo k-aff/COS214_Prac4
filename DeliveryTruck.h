@@ -10,6 +10,7 @@ class DeliveryTruck : public Truck
         FarmUnit* farmUnit; 
 
     public: 
+        DeliveryTruck(int amount, FarmUnit* farmUnit); 
         virtual void startEngine(); 
 }; 
 
