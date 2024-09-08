@@ -13,9 +13,9 @@ class SoilState{
         SoilState(string name){
             this->name = name;
         }
-        virtual double harvestCrops();
-        virtual double rain();
-        virtual string getName();
+        virtual double harvestCrops() = 0;
+        virtual double rain() = 0;
+        virtual string getName() = 0;
 
 };
 
