@@ -4,11 +4,11 @@
 #include "SoilState.h"
 
 class FruitfulSoil : public SoilState{
-
-    FruitfulSoil();
-    virtual double harvestCrops();
-    virtual double rain();
-    virtual string getName();
+    public:
+        FruitfulSoil();
+        virtual double harvestCrops();
+        virtual double rain();
+        virtual string getName();
 };
 
 #endif
