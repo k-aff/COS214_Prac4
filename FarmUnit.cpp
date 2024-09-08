@@ -25,6 +25,7 @@ void FarmUnit::updateAmount(int num)
     if (amount + num < 0)
         amount = 0; 
     else amount += num; 
+    cout << "Amount updated. " << endl; 
 }
 
 int FarmUnit::getAmount()

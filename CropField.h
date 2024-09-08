@@ -11,4 +11,4 @@ class CropField : public FarmUnit
         virtual void remove(FarmUnit* unit);
 };
 
-#endif;
+#endif
