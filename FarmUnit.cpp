@@ -3,14 +3,14 @@
 #include <iostream>
 using namespace std; 
 
-int FarmUnit::getTotalCapacity()
-{
-    return capacity; 
-}
-
 string FarmUnit::getSoilStateName()
 {
     return soilState->getName(); 
+}
+
+int FarmUnit::getTotalCapacity()
+{
+    return capacity; 
 }
 
 string FarmUnit::getCropType()
@@ -25,6 +25,11 @@ void FarmUnit::updateAmount(int num)
     if (amount + num < 0)
         amount = 0; 
     else amount += num; 
+}
+
+int FarmUnit::getAmount()
+{
+    return amount; 
 }
 
 void FarmUnit::callTruck()

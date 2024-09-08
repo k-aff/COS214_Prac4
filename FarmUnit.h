@@ -19,10 +19,11 @@ class FarmUnit
 
     public:
         //class operations 
-        virtual int getTotalCapacity(); 
         virtual string getSoilStateName();
-        virtual string getCropType(); 
+        int getTotalCapacity(); 
+        string getCropType(); 
         void updateAmount(int num); 
+        int getAmount(); 
         virtual ~FarmUnit(); 
 
         //state class operations
