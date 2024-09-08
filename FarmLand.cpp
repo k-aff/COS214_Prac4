@@ -78,3 +78,14 @@ void FarmLand::setSoilState(SoilState* newState)
 {
     cout << "Can't set a single soil state for FarmLand." << endl; 
 }
+
+FarmLand::~FarmLand()
+{
+    if (!children.empty())
+    {
+        for (int i=children.size()-1; i>=0; i--)
+        {
+            remove(children[i]); 
+        }
+    }
+}

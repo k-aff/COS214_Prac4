@@ -19,6 +19,7 @@ class FarmLand : public FarmUnit
         virtual string getSoilStateName();  
         virtual SoilState* getSoilState(); 
         virtual void setSoilState(SoilState* newState); 
+        ~FarmLand(); 
 
 }; 
 
