@@ -1,5 +1,8 @@
+#include "AddBarn.h"
+#include "AddFertilizer.h"
 #include "Barn.h"
 #include "CropField.h"
+#include "Decorator.h"
 #include "DrySoil.h"
 #include "FarmLand.h"
 #include "FertilizedSoil.h"
@@ -14,7 +17,14 @@ int main()
 {
     cout << "----------------------------------------------------------------------------------------------" << endl; 
 
+    //testing state
+    cout << "TESTING STATE" << endl; 
+
+    cout << "----------------------------------------------------------------------------------------------" << endl; 
+
     //testing composite
+    cout << "TESTING COMPOSITE" << endl; 
+
     FarmLand* farm1 = new FarmLand();
     FarmLand* farm2 = new FarmLand(); 
     FarmLand* farmOfFarms = new FarmLand(); 
@@ -152,9 +162,10 @@ int main()
     cout << "Soil state name: " << farm2->getSoilStateName() << endl; 
     //need to test remove and getchild 
 
+    //test adding a farmland to a farmland 
     farmOfFarms->add(farm1);
     farmOfFarms->add(farm2); 
-    
+
     // delete farm1; 
     // farm1 = nullptr; 
     // delete farm2; 
@@ -170,9 +181,78 @@ int main()
     cout << "Soil state name: " << farmOfFarms->getSoilStateName() << endl; 
     //need to test remove and getchild 
 
+    cout << "Removing farm1 from farmOfFarms" << endl; 
+    farmOfFarms->remove(farm1);
+    cout << endl; 
+
+    cout << "deleting farmOfFarms" << endl; 
     delete farmOfFarms; 
     farmOfFarms = nullptr;
 
-    //test adding a farmland to a farmland 
+    cout << "----------------------------------------------------------------------------------------------" << endl; 
+
+    //testing decorator 
+    cout << "TESTING DECORATOR" << endl; 
+
+    //add decorator to farmland
+    cout << "Adding decorator to a farmland: " << endl; 
+    FarmLand* farm3 = new FarmLand(); 
+    FarmUnit* b5 = new Barn("apples", 800); 
+    SoilState* fruitfulApples = new FruitfulSoil(); 
+    FarmUnit* apples = new CropField("apples", 800, fruitfulApples); 
+    farm3->add(b5); 
+    farm3->add(apples); 
+
+    Decorator* farm3NewBarn = new AddBarn(farm3, 1000); 
+    farm3NewBarn->increaseProduction(); 
+    cout << "Left over capacity: " << farm3NewBarn->getLeftOverCapacity() << endl;
+
+    //add decorator to decorator 
+    Decorator* farm3AddFert= new AddFertilizer(farm3NewBarn);
+    farm3AddFert->increaseProduction(); 
+    cout << "Left over capacity: " << farm3AddFert->getLeftOverCapacity() << endl; 
+
+    //add decorator to barn
+    cout << endl; 
+    FarmUnit* b6 = new Barn("pears", 700);
+    Decorator* b6NewBarn = new AddBarn(b6, 1000); 
+    b6NewBarn->increaseProduction(); 
+    cout << "Left over capacity b6: " << b6NewBarn->getLeftOverCapacity() << endl; 
+
+    FarmUnit* b7 = new Barn("oranges", 900);
+    Decorator* b7NewBarn = new AddBarn(b7, 1000); 
+    b7NewBarn->increaseProduction(); 
+    cout << "Left over capacity b7: " << b7NewBarn->getLeftOverCapacity() << endl; 
+
+    //add decorator to crop field
+    cout << endl;
+    SoilState* dryGrapes = new DrySoil(); 
+    FarmUnit* grapes = new CropField("grapes", 800, dryGrapes);
+    Decorator* grapesAddFert = new AddFertilizer(grapes); 
+    grapesAddFert->increaseProduction(); 
+    cout << "Left over capacity grapes: " << grapesAddFert->getLeftOverCapacity() << endl; 
+
+    SoilState* fertBlue = new FertilizedSoil(); 
+    FarmUnit* blueberries = new CropField("blue berries", 800, fertBlue);
+    Decorator* blueNewBarn = new AddBarn(blueberries, 1000); 
+    blueNewBarn->increaseProduction(); 
+    cout << "Left over capacity blueAddBarn: " << blueNewBarn->getLeftOverCapacity() << endl; 
+    blueNewBarn->updateAmount(500);
+    cout << "Left over capacity blueAddBarn: " << blueNewBarn->getLeftOverCapacity() << endl; 
+
+    //need to test harvest
+
+    //deletes
+    delete farm3AddFert;
+    farm3AddFert = nullptr; 
+    delete b6NewBarn; 
+    b6NewBarn = nullptr; 
+    delete b7NewBarn; 
+    b7NewBarn = nullptr;
+    delete grapesAddFert;
+    grapesAddFert = nullptr; 
+    delete blueNewBarn; 
+    blueNewBarn = nullptr;  
+
     return 0; 
 }

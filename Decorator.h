@@ -17,13 +17,23 @@ class Decorator : public FarmUnit
             return capacity - amount;
         } 
         
-        ~Decorator()
+        virtual ~Decorator()
         {
             if (component != nullptr)
             {
                 delete component;
                 component = nullptr;
             }
+        }
+
+        virtual void add(FarmUnit* unit)
+        {
+            cout << "Can't add a new FarmUnit to a Decorator." << endl; 
+        }
+
+        virtual void remove(FarmUnit* unit)
+        {
+            cout << "Can't remove a FarmUnit from a Decorator." << endl; 
         }
 };
 

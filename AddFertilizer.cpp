@@ -11,26 +11,26 @@ AddFertilizer::AddFertilizer(FarmUnit* component)
     typeOfCrop = component->getCropType(); 
     capacity = component->getTotalCapacity(); 
     amount = component->getAmount(); 
-    soilState = component->getSoilState(); 
+    soilState = nullptr; 
+    //!!!
     truckList = component->getTruckList(); 
+    if (component->getSoilState() == nullptr)
+        soilType = "NA";
+    else soilType = component->getSoilStateName(); 
 }
 
 float AddFertilizer::increaseProduction()
 {
-    if (soilState != nullptr)
+    if (soilType == "Dry")
     {
-        if (soilState->getName() == "Dry")
-        {
-            cout << "Fertilizer added, production has been increased." << endl; 
-            return 0.2; 
-        }
-        else 
-        {
-            cout << "Fertilizer can only be added to dry soil" << endl; 
-            return 1; 
-        }
+        cout << "Fertilizer added, production has been increased." << endl; 
+        return 0.2; 
     }
-    else return 1; 
+    else 
+    {
+        cout << "Fertilizer can only be added to dry soil" << endl; 
+        return 1; 
+    }
 }
 
 void AddFertilizer::harvest()

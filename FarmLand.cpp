@@ -45,7 +45,8 @@ void FarmLand::remove(FarmUnit* unit)
             delete children[i]; 
             children[i] = nullptr; 
             children.erase(children.begin() + i);
-            break; 
+            // cout << "Removed FarmUnit." << endl;
+            return; 
         }
     }
 }

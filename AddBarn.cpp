@@ -11,7 +11,8 @@ AddBarn::AddBarn(FarmUnit* component, int capacity)
 
     typeOfCrop = component->getCropType();
     amount = component->getAmount(); 
-    soilState = component->getSoilState();
+    soilState = nullptr; 
+    //!!!
     truckList = component->getTruckList(); 
 
 }

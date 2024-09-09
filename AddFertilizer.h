@@ -5,6 +5,9 @@
 
 class AddFertilizer : public Decorator
 {
+    private:
+        string soilType;
+        
     public: 
         AddFertilizer(FarmUnit* component); 
         virtual float increaseProduction();
