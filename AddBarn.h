@@ -4,11 +4,12 @@
 #include "Decorator.h"
 
 class AddBarn : public Decorator
-{
+{        
     public: 
-        virtual void increaseProduction();
+        AddBarn(FarmUnit* component, int capacity); 
+        virtual float increaseProduction();
         virtual void harvest(); 
-        virtual void getLeftOverCapacity(); 
+        virtual int getLeftOverCapacity(); 
 };
 
 #endif

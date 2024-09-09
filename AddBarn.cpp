@@ -4,14 +4,22 @@
 #include <iostream>
 using namespace std; 
 
-AddBarn::AddBarn(FarmUnit* component)
+AddBarn::AddBarn(FarmUnit* component, int capacity)
 {
+    this->component = component; 
+    this->capacity = capacity + component->getTotalCapacity(); 
+
+    typeOfCrop = component->getCropType();
+    amount = component->getAmount(); 
+    soilState = component->getSoilState();
+    truckList = component->getTruckList(); 
 
 }
 
-void AddBarn::increaseProduction()
+float AddBarn::increaseProduction()
 {
-
+    cout << "Cannot increase production in a Barn" << endl; 
+    return 1; 
 }
 
 void AddBarn::harvest()
@@ -19,7 +27,7 @@ void AddBarn::harvest()
 
 } 
 
-void AddBarn::getLeftOverCapacity()
+int AddBarn::getLeftOverCapacity()
 {
-
+    return capacity - amount; 
 }
