@@ -11,7 +11,11 @@ class Decorator : public FarmUnit
     public: 
         virtual float increaseProduction() = 0;
         virtual void harvest() = 0; 
-        virtual int getLeftOverCapacity() = 0; 
+
+        int getLeftOverCapacity() 
+        {
+            return capacity - amount;
+        } 
         
         ~Decorator()
         {
