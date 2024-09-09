@@ -7,7 +7,7 @@
 class Iterator{
 
     public:
-        virtual FarmUnit* firstFarm(std::vector<FarmUnit*>) = 0;
+        virtual FarmUnit* firstFarm() = 0;
         virtual void next() = 0;
         virtual bool isDone() = 0;
         virtual FarmUnit* currentFarm() = 0;

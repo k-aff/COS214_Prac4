@@ -14,7 +14,7 @@ class BFT_Iterator : public Iterator{
         vector<FarmUnit*> visited;
         queue<FarmUnit*> queue;
         FarmUnit* it = *collection.begin();
-        int ind ;
+        int ind;
         int max;
 
     public:

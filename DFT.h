@@ -1,10 +1,13 @@
 #ifndef DFT_H
 #define DFT_H
 
-#include "Iterator.h"
+#include "Traversal.h"
+#include "DFT_Iterator.h"
 
-class DFT{
-    Iterator* concreteIterator();
+class DFT : public Traversal {
+    Iterator* concreteIterator(vector<FarmUnit*> farmUnit){
+        return new DFT_Iterator(farmUnit);
+    }
 };
 
 #endif

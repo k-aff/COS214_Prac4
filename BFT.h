@@ -3,7 +3,6 @@
 
 #include "Traversal.h"
 #include "BFT_Iterator.h";
-#include <vector>
 
 class BFT : public Traversal{
 
