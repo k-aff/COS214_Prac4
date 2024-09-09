@@ -29,6 +29,33 @@ int main()
     //testing state
     cout << "TESTING STATE" << endl; 
 
+    SoilState* drySoil = new DrySoil();
+    SoilState* fruitfulSoil = new FruitfulSoil(); 
+    SoilState* floodedSoil = new FloodedSoil(); 
+    SoilState* fertilizedSoil = new FertilizedSoil(); 
+
+    cout << "drySoil rain: " << drySoil->rain() << endl; 
+    cout << "drySoil harvestCrops: " << drySoil->harvestCrops() << endl; 
+
+    cout << "fruitfulSoil rain: " << fruitfulSoil->rain() << endl; 
+    cout << "fruitfulSoil harvestCrops: " << fruitfulSoil->harvestCrops() << endl; 
+
+    cout << "floodedSoil rain: " << floodedSoil->rain() << endl; 
+    cout << "floodedSoil harvestCrops: " << floodedSoil->harvestCrops() << endl; 
+
+    cout << "fertilizedSoil rain: " << fertilizedSoil->rain() << endl; 
+    cout << "fertilizedSoil harvestCrops: " << fertilizedSoil->harvestCrops() << endl; 
+
+    //deletes 
+    delete drySoil; 
+    drySoil = nullptr; 
+    delete fruitfulSoil; 
+    fruitfulSoil = nullptr; 
+    delete floodedSoil; 
+    floodedSoil = nullptr; 
+    delete fertilizedSoil; 
+    fertilizedSoil = nullptr; 
+
     cout << "----------------------------------------------------------------------------------------------" << endl; 
 
     //testing composite
