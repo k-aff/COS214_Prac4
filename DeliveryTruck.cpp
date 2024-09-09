@@ -3,9 +3,8 @@
 #include <iostream>
 using namespace std; 
 
-DeliveryTruck::DeliveryTruck(int amount, FarmUnit* farmUnit)
+DeliveryTruck::DeliveryTruck(FarmUnit* farmUnit)
 {
-    this->amount = amount; 
     this->farmUnit = farmUnit; 
 } 
 

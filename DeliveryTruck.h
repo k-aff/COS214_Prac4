@@ -5,12 +5,11 @@
 
 class DeliveryTruck : public Truck 
 {
-    private: 
-        int amount; 
+    private:  
         FarmUnit* farmUnit; 
 
     public: 
-        DeliveryTruck(int amount, FarmUnit* farmUnit); 
+        DeliveryTruck(FarmUnit* farmUnit); 
         virtual void startEngine(); 
 }; 
 

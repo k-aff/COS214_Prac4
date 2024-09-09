@@ -8,11 +8,11 @@
 class FertilizerTruck : public Truck 
 {
     private:
-        SoilState* fieldState; 
+        string fieldState; 
         FarmUnit* farmUnit;
 
     public:
-        FertilizerTruck(SoilState* fieldState, FarmUnit* farmUnit); 
+        FertilizerTruck(FarmUnit* farmUnit); 
         virtual void startEngine(); 
 }; 
 

@@ -3,10 +3,12 @@
 #include <iostream>
 using namespace std; 
 
-FertilizerTruck::FertilizerTruck(SoilState* fieldState, FarmUnit* farmUnit)
+FertilizerTruck::FertilizerTruck(FarmUnit* farmUnit)
 {
-    this->fieldState = fieldState; 
     this->farmUnit = farmUnit; 
+    if (farmUnit->getSoilState() == nullptr)
+        this->fieldState == "NA";
+    else this->fieldState = farmUnit->getSoilStateName(); 
 } 
 
 void FertilizerTruck::startEngine()

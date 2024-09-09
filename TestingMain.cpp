@@ -254,5 +254,16 @@ int main()
     delete blueNewBarn; 
     blueNewBarn = nullptr;  
 
+    //testing observer
+    // FarmLand* farm3 = new FarmLand(); 
+    // FarmUnit* b8 = new Barn("", 800); 
+    // SoilState* fruitfulApples = new FruitfulSoil(); 
+    // FarmUnit* apples = new CropField("apples", 800, fruitfulApples); 
+    
+    // farm3->add(b5); 
+    // farm3->add(apples); 
+
+    
+
     return 0; 
 }
