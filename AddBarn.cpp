@@ -26,8 +26,3 @@ void AddBarn::harvest()
 {
 
 } 
-
-int AddBarn::getLeftOverCapacity()
-{
-    return capacity - amount; 
-}
