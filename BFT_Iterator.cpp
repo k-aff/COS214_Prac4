@@ -1,4 +1,4 @@
-// #include <algorithm>
+#include <algorithm>
 #include "BFT_Iterator.h"
 
 BFT_Iterator::BFT_Iterator(vector<FarmUnit*> farmUnit){
