@@ -1,22 +1,22 @@
 #include "AddBarn.h"
 #include "AddFertilizer.h"
 #include "Barn.h"
-#include "BFT.h"
-#include "BFT_Iterator.h"
+// #include "BFT.h"
+// #include "BFT_Iterator.h"
 #include "CropField.h"
 #include "Decorator.h"
 #include "DeliveryTruck.h"
-#include "DFT.h"
-#include "DFT_Iterator.h"
+// #include "DFT.h"
+// #include "DFT_Iterator.h"
 #include "DrySoil.h"
 #include "FarmLand.h"
 #include "FertilizerTruck.h"
 #include "FertilizedSoil.h"
 #include "FloodedSoil.h"
 #include "FruitfulSoil.h"
-#include "Iterator.h"
+// #include "Iterator.h"
 #include "SoilState.h"
-#include "Traversal.h"
+// #include "Traversal.h"
 #include "Truck.h"
 
 #include <iostream>
@@ -227,6 +227,9 @@ int main()
     Decorator* b6NewBarn = new AddBarn(b6, 1000); 
     b6NewBarn->increaseProduction(); 
     cout << "Left over capacity b6: " << b6NewBarn->getLeftOverCapacity() << endl; 
+    Truck* b6DelivTruck = new DeliveryTruck(b6NewBarn);
+    b6NewBarn->harvest(); 
+
 
     FarmUnit* b7 = new Barn("oranges", 900);
     Decorator* b7NewBarn = new AddBarn(b7, 1000); 
@@ -264,21 +267,21 @@ int main()
     blueNewBarn = nullptr;  
 
     //testing observer
-    FarmLand* farm4 = new FarmLand(); 
-    FarmUnit* b8 = new Barn("strawberries", 500); 
-    SoilState* fruitfulBerry = new FruitfulSoil(); 
-    FarmUnit* strawberries = new CropField("strawberries", 600, fruitfulBerry); 
+    // FarmLand* farm4 = new FarmLand(); 
+    // FarmUnit* b8 = new Barn("strawberries", 500); 
+    // SoilState* fruitfulBerry = new FruitfulSoil(); 
+    // FarmUnit* strawberries = new CropField("strawberries", 600, fruitfulBerry); 
 
-    Truck* berryFertTruck = new FertilizerTruck(strawberries);
-    strawberries->buyTruck(berryFertTruck);
+    // Truck* berryFertTruck = new FertilizerTruck(strawberries);
+    // strawberries->buyTruck(berryFertTruck);
 
     
-    farm4->add(b8); 
-    farm4->add(strawberries); 
+    // farm4->add(b8); 
+    // farm4->add(strawberries); 
 
     //deletes 
-    delete farm4;
-    farm4 = nullptr; 
+    // delete farm4;
+    // farm4 = nullptr; 
     
 
     return 0; 

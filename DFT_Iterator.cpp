@@ -9,7 +9,7 @@ DFT_Iterator::DFT_Iterator(vector<FarmUnit*> farmUnit){
 
     int i=0; 
     while(it->getChild(i)!=nullptr){
-        stack.push(it->getChild(i++));
+        sta.push(it->getChild(i++));
     }
 }
 
@@ -19,9 +19,9 @@ FarmUnit* DFT_Iterator::firstFarm(){
 
 void DFT_Iterator::next() {
 
-    if (!stack.empty()) {
-        it = stack.top();
-        stack.pop();
+    if (!sta.empty()) {
+        it = sta.top();
+        sta.pop();
     } 
     else if (ind < collection.size()) {
         it = collection[ind++];
@@ -33,7 +33,7 @@ void DFT_Iterator::next() {
     int i = 0;
     FarmUnit* child;
     while ((child = it->getChild(i++)) != nullptr) {
-        stack.push(child); // Add child to the stack
+        sta.push(child); // Add child to the stack
     }
 }
 

@@ -1,30 +1,30 @@
-#ifndef BFT_ITERATOR_H
-#define BFT_ITERATOR_H
+// #ifndef BFT_ITERATOR_H
+// #define BFT_ITERATOR_H
 
-#include <queue>
-#include "Iterator.h"
-#include "FarmUnit.h"
+// #include <queue>
+// #include "Iterator.h"
+// #include "FarmUnit.h"
 
-using namespace std;
+// using namespace std;
 
-class BFT_Iterator : public Iterator{
+// class BFT_Iterator : public Iterator{
 
-    private:
-        vector<FarmUnit*> collection;
-        vector<FarmUnit*> visited;
-        queue<FarmUnit*> queue;
-        FarmUnit* it = *collection.begin();
-        int ind;
-        int max;
+//     private:
+//         vector<FarmUnit*> collection;
+//         vector<FarmUnit*> visited;
+//         queue<FarmUnit*> que;
+//         FarmUnit* it = *collection.begin();
+//         int ind;
+//         int max;
 
-    public:
-        BFT_Iterator(vector<FarmUnit*> farmUnit);
-        virtual FarmUnit* firstFarm();
-        virtual void next();
-        virtual bool isDone();
-        virtual FarmUnit* currentFarm();
-        virtual ~BFT_Iterator();
+//     public:
+//         BFT_Iterator(vector<FarmUnit*> farmUnit);
+//         virtual FarmUnit* firstFarm();
+//         virtual void next();
+//         virtual bool isDone();
+//         virtual FarmUnit* currentFarm();
+//         virtual ~BFT_Iterator();
 
-};
+// };
 
-#endif
+// #endif

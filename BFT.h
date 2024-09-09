@@ -1,15 +1,15 @@
-#ifndef BFT_H
-#define BFT_H
+// #ifndef BFT_H
+// #define BFT_H
 
-#include "Traversal.h"
-#include "BFT_Iterator.h";
+// #include "Traversal.h"
+// #include "BFT_Iterator.h";
 
-class BFT : public Traversal{
+// class BFT : public Traversal{
 
-    public:
-        BFT_Iterator* concreteIterator(std::vector<FarmUnit*> farmUnit){
-            return new BFT_Iterator(farmUnit);
-        }
-};
+//     public:
+//         BFT_Iterator* concreteIterator(std::vector<FarmUnit*> farmUnit){
+//             return new BFT_Iterator(farmUnit);
+//         }
+// };
 
-#endif
+// #endif

@@ -1,13 +1,13 @@
-#ifndef TRAVERSAL_H
-#define TRAVERSAL_H
+// #ifndef TRAVERSAL_H
+// #define TRAVERSAL_H
 
-#include <vector>
-#include "Iterator.h"
+// #include <vector>
+// #include "Iterator.h"
 
-class Traversal{
+// class Traversal{
 
-    public:
-        virtual Iterator* concreteIterator(vector<FarmUnit*> farmUnit) = 0;
-};
+//     public:
+//         virtual Iterator* concreteIterator(vector<FarmUnit*> farmUnit) = 0;
+// };
 
-#endif
+// #endif
