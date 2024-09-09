@@ -6,9 +6,9 @@
 class AddFertilizer : public Decorator
 {
     public: 
-        virtual void increaseProduction();
+        AddFertilizer(FarmUnit* component); 
+        virtual float increaseProduction();
         virtual void harvest(); 
-        virtual void getLeftOverCapacity(); 
 };
 
 #endif
