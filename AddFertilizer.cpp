@@ -17,8 +17,19 @@ AddFertilizer::AddFertilizer(FarmUnit* component)
 
 float AddFertilizer::increaseProduction()
 {
-    if (soilState->getName() == "Dry")
-        return 0.2; 
+    if (soilState != nullptr)
+    {
+        if (soilState->getName() == "Dry")
+        {
+            cout << "Fertilizer added, production has been increased." << endl; 
+            return 0.2; 
+        }
+        else 
+        {
+            cout << "Fertilizer can only be added to dry soil" << endl; 
+            return 1; 
+        }
+    }
     else return 1; 
 }
 
