@@ -6,6 +6,8 @@
 #include "FloodedSoil.h"
 #include "FruitfulSoil.h"
 #include "SoilState.h"
+#include "Iterator.h"
+#include "Traversal.h"
 
 #include <iostream>
 using namespace std; 
@@ -174,5 +176,10 @@ int main()
     farmOfFarms = nullptr;
 
     //test adding a farmland to a farmland 
+
+    cout << "----------------------------------------------------------------------------------------------" << endl; 
+
+    cout <<"TESTING ITERATOR" << endl;
+
     return 0; 
 }

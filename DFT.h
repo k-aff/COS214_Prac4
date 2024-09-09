@@ -5,9 +5,11 @@
 #include "DFT_Iterator.h"
 
 class DFT : public Traversal {
-    Iterator* concreteIterator(vector<FarmUnit*> farmUnit){
-        return new DFT_Iterator(farmUnit);
-    }
+
+    public:
+        Iterator* concreteIterator(vector<FarmUnit*> farmUnit){
+            return new DFT_Iterator(farmUnit);
+        }
 };
 
 #endif

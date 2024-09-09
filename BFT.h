@@ -6,9 +6,10 @@
 
 class BFT : public Traversal{
 
-    BFT_Iterator* concreteIterator(std::vector<FarmUnit*> farmUnit){
-        return new BFT_Iterator(farmUnit);
-    }
+    public:
+        BFT_Iterator* concreteIterator(std::vector<FarmUnit*> farmUnit){
+            return new BFT_Iterator(farmUnit);
+        }
 };
 
 #endif
