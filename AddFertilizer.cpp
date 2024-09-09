@@ -1,5 +1,6 @@
 #include "AddFertilizer.h"
 #include "FarmUnit.h"
+#include "FertilizedSoil.h"
 
 #include <iostream>
 using namespace std; 
@@ -24,6 +25,7 @@ void AddFertilizer::increaseProduction()
     if (soilType == "Dry")
     {
         cout << "Fertilizer added, production has been increased." << endl; 
+        component->setSoilState(new FertilizedSoil); 
         amount *= 1.2; 
     }
     else 

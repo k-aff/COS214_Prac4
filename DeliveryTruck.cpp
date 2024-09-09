@@ -10,8 +10,9 @@ DeliveryTruck::DeliveryTruck(FarmUnit* farmUnit)
 
 void DeliveryTruck::startEngine()
 {
-    //decrease amount using the formula = updateAmount(-1*amount*harvestCrop
+    cout << "Started Engine." << endl; 
     if (farmUnit->getSoilState() != nullptr)
         farmUnit->updateAmount(-1*farmUnit->getAmount()*farmUnit->getSoilState()->harvestCrops());
     else farmUnit->updateAmount(-1*farmUnit->getAmount()); 
+    cout << "Delivery Truck sent to collect harvested crop." << endl; 
 }

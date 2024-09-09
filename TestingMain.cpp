@@ -228,9 +228,10 @@ int main()
     b6NewBarn->increaseProduction(); 
     cout << "Left over capacity b6: " << b6NewBarn->getLeftOverCapacity() << endl; 
     Truck* b6DelivTruck = new DeliveryTruck(b6NewBarn);
+    b6NewBarn->buyTruck(b6DelivTruck); 
     b6NewBarn->harvest(); 
 
-
+    cout << endl; 
     FarmUnit* b7 = new Barn("oranges", 900);
     Decorator* b7NewBarn = new AddBarn(b7, 1000); 
     b7NewBarn->increaseProduction(); 

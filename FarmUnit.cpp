@@ -67,8 +67,10 @@ void FarmUnit::sellTruck(Truck* truck)
 
 void FarmUnit::callTruck()
 {
+    // cout << truckList.size();
     for (int i=0; i<truckList.size(); i++)
         truckList[i]->startEngine(); 
+    // cout << "here" << endl; 
 }
 
 FarmUnit::~FarmUnit()
