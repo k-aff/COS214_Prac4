@@ -27,4 +27,4 @@ class BFT_Iterator : public Iterator{
 
 };
 
-#endif;
+#endif

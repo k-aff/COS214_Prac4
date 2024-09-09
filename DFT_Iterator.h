@@ -25,4 +25,4 @@ class DFT_Iterator : public Iterator{
         virtual ~DFT_Iterator();
 };
 
-#endif;
+#endif

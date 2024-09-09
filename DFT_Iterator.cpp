@@ -1,4 +1,4 @@
-// #include <algorithm>
+#include <algorithm>
 #include "DFT_Iterator.h"
 
 DFT_Iterator::DFT_Iterator(vector<FarmUnit*> farmUnit){

@@ -5,7 +5,9 @@
 #include "Iterator.h"
 
 class Traversal{
-    virtual Iterator* concreteIterator(vector<FarmUnit*> farmUnit) = 0;
+
+    public:
+        virtual Iterator* concreteIterator(vector<FarmUnit*> farmUnit) = 0;
 };
 
 #endif
