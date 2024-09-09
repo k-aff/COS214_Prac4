@@ -67,7 +67,8 @@ void FarmUnit::sellTruck(Truck* truck)
 
 void FarmUnit::callTruck()
 {
-    //needs to be filled in after iterator is done
+    for (int i=0; i<truckList.size(); i++)
+        truckList[i]->startEngine(); 
 }
 
 FarmUnit::~FarmUnit()

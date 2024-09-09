@@ -13,6 +13,7 @@ FertilizerTruck::FertilizerTruck(FarmUnit* farmUnit)
 
 void FertilizerTruck::startEngine()
 {
-    //decrease amount using the formula = updateAmount(-1*amount*harvestCrop
-    cout << "incomplete in fertilizerTruck" << endl; 
+    if (fieldState == "Dry")
+        cout << "Fertilizer Truck is delivering fertilizer to the crop field." << endl; 
+    else cout << "Can't deliver fertilizer since the soil is not dry." << endl; 
 }

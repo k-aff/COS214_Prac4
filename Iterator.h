@@ -5,7 +5,6 @@
 #include "FarmUnit.h"
 
 class Iterator{
-
     public:
         virtual FarmUnit* firstFarm() = 0;
         virtual void next() = 0;

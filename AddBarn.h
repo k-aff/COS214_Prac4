@@ -7,7 +7,7 @@ class AddBarn : public Decorator
 {        
     public: 
         AddBarn(FarmUnit* component, int capacity); 
-        virtual float increaseProduction();
+        virtual void increaseProduction();
         virtual void harvest(); 
 };
 

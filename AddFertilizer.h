@@ -10,7 +10,7 @@ class AddFertilizer : public Decorator
         
     public: 
         AddFertilizer(FarmUnit* component); 
-        virtual float increaseProduction();
+        virtual void increaseProduction();
         virtual void harvest(); 
 };
 

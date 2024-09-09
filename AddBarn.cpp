@@ -17,13 +17,12 @@ AddBarn::AddBarn(FarmUnit* component, int capacity)
 
 }
 
-float AddBarn::increaseProduction()
+void AddBarn::increaseProduction()
 {
     cout << "Cannot increase production in a Barn" << endl; 
-    return 1; 
 }
 
 void AddBarn::harvest()
 {
-
+    callTruck(); 
 } 

@@ -9,7 +9,7 @@ class Decorator : public FarmUnit
         FarmUnit* component;
 
     public: 
-        virtual float increaseProduction() = 0;
+        virtual void increaseProduction() = 0;
         virtual void harvest() = 0; 
 
         int getLeftOverCapacity() 
