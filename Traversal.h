@@ -4,8 +4,7 @@
 #include "Iterator.h"
 
 class Traversal{
-    Iterator* concreteIterator();
-    
+    virtual Iterator* concreteIterator() = 0;
 };
 
 #endif
