@@ -3,12 +3,15 @@
 #include "Barn.h"
 #include "CropField.h"
 #include "Decorator.h"
+#include "DeliveryTruck.h"
 #include "DrySoil.h"
 #include "FarmLand.h"
+#include "FertilizerTruck.h"
 #include "FertilizedSoil.h"
 #include "FloodedSoil.h"
 #include "FruitfulSoil.h"
 #include "SoilState.h"
+#include "Truck.h"
 
 #include <iostream>
 using namespace std; 
@@ -255,14 +258,21 @@ int main()
     blueNewBarn = nullptr;  
 
     //testing observer
-    // FarmLand* farm3 = new FarmLand(); 
-    // FarmUnit* b8 = new Barn("", 800); 
-    // SoilState* fruitfulApples = new FruitfulSoil(); 
-    // FarmUnit* apples = new CropField("apples", 800, fruitfulApples); 
-    
-    // farm3->add(b5); 
-    // farm3->add(apples); 
+    FarmLand* farm4 = new FarmLand(); 
+    FarmUnit* b8 = new Barn("strawberries", 500); 
+    SoilState* fruitfulBerry = new FruitfulSoil(); 
+    FarmUnit* strawberries = new CropField("strawberries", 600, fruitfulBerry); 
 
+    Truck* berryFertTruck = new FertilizerTruck(strawberries);
+    strawberries->buyTruck(berryFertTruck);
+
+    
+    farm4->add(b8); 
+    farm4->add(strawberries); 
+
+    //deletes 
+    delete farm4;
+    farm4 = nullptr; 
     
 
     return 0; 

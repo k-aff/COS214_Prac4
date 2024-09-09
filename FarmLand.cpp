@@ -28,10 +28,10 @@ void FarmLand::add(FarmUnit* unit)
     amount += unit->getAmount();  
 
     //add trucks 
-    for (int i=0; i<unit->getTruckList().size(); i++)
-    {
-        truckList.push_back(unit->getTruckList()[i]); 
-    }
+//     for (int i=0; i<unit->getTruckList().size(); i++)
+//     {
+//         truckList.push_back(unit->getTruckList()[i]); 
+//     }
 }
 
 void FarmLand::remove(FarmUnit* unit)
